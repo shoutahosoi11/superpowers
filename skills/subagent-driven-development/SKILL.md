@@ -14,7 +14,7 @@ Execute plan by dispatching a fresh implementer subagent per task, a task review
 **Narration:** between tool calls, narrate at most one short line — the
 ledger and the tool results carry the record.
 
-**Continuous execution:** Do not pause to check in with your human partner between tasks. Execute all tasks from the plan without stopping. The only reasons to stop are the four named below, or all tasks complete. "Should I continue?" prompts and progress summaries waste their time — they asked you to execute the plan, so execute it.
+**Continuous execution:** Do not pause to check in with your human partner between tasks. Execute all tasks from the plan without stopping. The only reasons to stop are the five named below, or all tasks complete. "Should I continue?" prompts and progress summaries waste their time — they asked you to execute the plan, so execute it.
 
 **Rulings, not stalls.** A running plan does not wait on a human. Conflicts,
 ambiguities, plan defects, a cap you would have asked to exceed — decide
@@ -24,11 +24,11 @@ judgment settles what neither answers. Record every decision in the ledger as
 going. A wrong ruling costs rework your human partner can see and undo; a
 session parked on a question costs their whole day and buys nothing.
 
-Four things stop you, and only these: an irreversible or destructive
-operation; a security-sensitive action; a side effect outside this worktree
-that norms say you ask about first (a merge, a push to a shared branch, a
-publish); and a plan so broken that every path forward is a guess. For those,
-stop and ask.
+Five things stop you: an irreversible or destructive operation;
+a security-sensitive action; an external side effect requiring permission
+(a merge, shared-branch push, or publish); a plan so broken that every path
+forward is a guess; or an unapproved material design change affecting
+user behavior or architecture. For those, stop and ask.
 
 **Human-owned decisions take precedence over automatic rulings.** Apply `superpowers:human-led-design` when implementation uncovers a **material, previously unapproved** change to user behavior, state ownership/SSOT, persistence, interfaces, new dependencies, architecture, or accepted trade-offs. Stop the affected implementation and ask for human approval with a short causal comparison. Record the approved decision, then resume the plan. Continue making routine naming, reuse, and local implementation choices autonomously; do not ask permission for each task.
 
