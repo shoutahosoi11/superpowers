@@ -142,6 +142,14 @@ If it grows mid-task, stop, say so, and step up a size.
 If this is really several independent projects, say so, agree on an
 order, and brainstorm them one at a time.
 
+## Software Design Decision Gate
+
+For software work that involves meaningful user-value, UX, responsibility, state ownership, data model, API, or architecture choices, **REQUIRED SUB-SKILL: Use superpowers:human-led-design** before presenting the final design for approval. It supplements this conversation; it does not replace brainstorming.
+
+The human decides which user outcomes and material trade-offs matter. Present a concise design and comparative, causally justified alternatives grounded in the actual codebase. Mark assumptions and unknown user preferences. The agent handles routine details within the approved boundaries.
+
+**Do not start production implementation until all material design choices and the actual design have explicit human approval.** Skipping discovery questions is not approval of design choices the human has never seen. Small, clear tasks without material choices remain lightweight; an explicitly approved throwaway spike remains an exception.
+
 ## The Written Design
 
 For a project, write a plain document a talented builder in the domain
@@ -183,9 +191,11 @@ Building includes writing product code, scaffolding, installing
 dependencies, creating projects, and invoking an implementation skill.
 Reading and exploring are fine.
 
-Two exceptions. If they opted out of the questions, the skill is done
-and the gate goes with it. A spike they said yes to may be built; it
-stays labeled throwaway, and keeping what it produced is a new request
+Two exceptions. If they opted out of the questions, this skill's gate
+does not block a quick, clear task; however, the independent human-led-design
+approval gate still applies to material software decisions that have not been
+presented and approved. A spike they said yes to may be built; it stays
+labeled throwaway, and keeping what it produced is a new request
 that comes back through this gate.
 
 After a project's document is approved, the next step is the plan. For
