@@ -31,6 +31,15 @@ Before defining tasks, map out which files will be created or modified and what 
 
 This structure informs the task decomposition. Each task should produce self-contained changes that make sense independently.
 
+## Naming and Existing-Logic Reuse
+
+Before writing new interfaces or tasks, inspect the codebase for existing functions, utilities, patterns, vocabulary, and tests that implement the same behavior.
+
+- Prefer established repository names and simple English words. Pick self-explanatory variable, function, and test names even if they are somewhat longer. Follow the project's naming and language conventions.
+- In each relevant task's `Files` or `Interfaces` description, name the existing implementation that should be reused and what behavior it already guarantees. Reuse matching logic through existing interfaces instead of duplicating it.
+- If proposed names differ from existing domain terms or reuse would change semantics, explain the conflict briefly. Do not rename unrelated code or add abstractions without concrete user/system value.
+- Keep the planned change small and consistent with existing responsibilities, architecture, and tests.
+
 ## Task Right-Sizing
 
 A task is the smallest unit that carries its own test cycle and is worth a

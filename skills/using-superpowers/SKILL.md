@@ -60,6 +60,20 @@ If your harness appears here, read its reference file for special instructions:
 - Hermes Agent: `references/hermes-tools.md`
 - Muse: `references/muse-tools.md`
 
+## Response Style (All Replies)
+
+Apply to **every user-facing response** in Codex and Claude Code, including responses from other skills.
+
+- Start with a clear conclusion in 1–2 sentences.
+- Prefer short sentences, concise bullets and only necessary headings. Remove filler, repeated points, unnecessary prefaces and generic advice.
+- Explain details only when needed for the requested task; do not shorten away necessary evidence, uncertainty, caveats, or causal reasoning.
+- In significant design discussions, use the structured comparative output required by `superpowers:human-led-design`, but keep each section brief.
+- For recommendations, show **technical property → why → impact on users and the system**, relative to alternatives. Do not mistake a shared capability for a unique advantage.
+- Distinguish facts, assumptions and recommendations; ask at most one focused human-owned design question at a time.
+- For code reading, explain one feature at a time, without repeating source code already visible in an editor.
+
+**Conciseness is a presentation rule, not permission to omit important trade-offs.**
+
 ## User Instructions
 
 User instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to.

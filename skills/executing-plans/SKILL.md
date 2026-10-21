@@ -36,11 +36,13 @@ as `Ruling: <what you decided> — <why> — <what it costs if wrong>`, and keep
 going. Deviating from the plan without a ledgered ruling is a decision made
 in secret.
 
-Four things stop you, and only these: an irreversible or destructive
-operation; a security-sensitive action; a side effect outside this worktree
-that norms say you ask about first (a merge, a push to a shared branch, a
-publish); and a plan so broken that every path forward is a guess. For
-those, stop and ask.
+Five things stop you: an irreversible or destructive operation;
+a security-sensitive action; an external side effect requiring permission
+(a merge, shared-branch push, or publish); a plan so broken that every path
+forward is a guess; or an unapproved material design change affecting
+user behavior or architecture. For those, stop and ask.
+
+**Human-owned decisions take precedence over automatic rulings.** Apply `superpowers:human-led-design` when implementation uncovers a **material, previously unapproved** change to user behavior, state ownership/SSOT, persistence, interfaces, new dependencies, architecture, or accepted trade-offs. Stop the affected implementation and ask for human approval with a short causal comparison. Record the approved decision, then resume the plan. Continue making routine naming, reuse, and local implementation choices autonomously; do not ask permission for each task.
 
 ## When to Use
 
