@@ -305,6 +305,20 @@ Superpowers is available as a native Muse plugin — same repo, same skills, all
 
 Restart any active Muse sessions after installing so the `SessionStart` hook takes effect — skills are active immediately, hooks require approval on first install. To verify, start a fresh session and send `Let's make a react todo list` — a working install auto-triggers `brainstorming` before any code is written. Version is tracked in `.version-bump.json` so `scripts/bump-version.sh` keeps it in sync.
 
+## Human-Led Design Extensions (This Fork)
+
+This fork adds optional, user-centered design and code-reading skills:
+
+- [`human-led-design`](skills/human-led-design/SKILL.md): Inspired by GitHub Spec Kit constitution/clarify and architecture-design ADR reviews. The human decides user goals and significant architecture choices; the agent examines the codebase, compares **relative** trade-offs with causal explanations, and implements only after design approval.
+- [`codebase-understanding`](skills/codebase-understanding/SKILL.md): Concise feature-first explanations linking user-visible behavior, file/function responsibilities, state and SSOT, tests, and design rationale.
+- [Constitution](skills/human-led-design/constitution.md), [ADR template](skills/human-led-design/templates/ADR.md), and [worked examples](skills/human-led-design/examples/): calibrated guidance for UX-first benefits/harms, minimal changes, existing-system impact, and async state safety.
+
+This fork also adds a **conclusion-first, concise response policy** to `using-superpowers`, and a human-led architecture approval gate to `brainstorming`. The rest of Superpowers' planning, TDD, review, and execution flow is retained.
+
+**Important:** Installing Superpowers from the official Claude/Codex marketplace installs the official version, **not these fork additions**. To use the modified skills and global response policy, load this fork's plugin/skills in each coding-agent runtime. Repository-specific requirements should remain in each project's instruction files. AI instructions are not a hard security boundary; confirm the behavior with real agent trials.
+
+Static regression check: `bash tests/human-led-design/test-skill-structure.sh`. Behavioral tests with real agents are still required to validate instruction adherence.
+
 ## The Basic Workflow
 
 1. **brainstorming** - Activates before building anything. Draws out what you actually want, and why, through questions that get you describing it, then plays its understanding back for correction. Small changes get agreed in chat; projects get a written design document a builder could plan from.
