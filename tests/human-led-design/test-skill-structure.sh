@@ -9,4 +9,9 @@ grep -q '## Response Style (All Replies)' "$root/skills/using-superpowers/SKILL.
 grep -q 'SSOT' "$root/skills/human-led-design/SKILL.md"
 grep -q 'ユーザーのメリット' "$root/skills/human-led-design/SKILL.md"
 grep -q 'システムのデメリット' "$root/skills/human-led-design/SKILL.md"
+grep -q '## Readable Naming and Reuse' "$root/skills/test-driven-development/SKILL.md"
+grep -q '## Naming and Existing-Logic Reuse' "$root/skills/writing-plans/SKILL.md"
+grep -q 'Reuse a compatible existing implementation' "$root/skills/subagent-driven-development/implementer-prompt.md"
+grep -q 'Human-owned decisions take precedence' "$root/skills/executing-plans/SKILL.md"
+grep -q 'Human-owned decisions take precedence' "$root/skills/subagent-driven-development/SKILL.md"
 echo PASS
