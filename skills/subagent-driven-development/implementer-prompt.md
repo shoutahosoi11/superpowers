@@ -71,6 +71,13 @@ Subagent (general-purpose):
       and note it as a concern in your report
     - In existing codebases, follow established patterns. Improve code you're touching
       the way a good developer would, but don't restructure things outside your task.
+    - Inspect existing helpers, validators, tests, and business logic before writing
+      new code. Reuse a compatible existing implementation instead of copying its logic.
+    - Prefer simple English, existing domain vocabulary, and self-explanatory
+      function/variable/test names. A longer clear name beats a short ambiguous one.
+    - Keep conditions and control flow easy to read; avoid clever abbreviations.
+    - If reuse would change behavior or require an unapproved material design choice,
+      stop and escalate to the controller rather than silently redesigning.
 
     ## When You're in Over Your Head
 
