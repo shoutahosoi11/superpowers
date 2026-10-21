@@ -68,6 +68,19 @@ digraph tdd_cycle {
 }
 ```
 
+## Readable Naming and Reuse (Applies Throughout TDD)
+
+Before the RED test, inspect the relevant existing functions, data flow, domain terms, naming conventions, and tests.
+
+- **Name for meaning:** Prefer simple, familiar English words and names already used for the same concept in this repository. Use clear verbs for functions, nouns for values, and behavior-oriented test names. Longer descriptive names are better than short, ambiguous abbreviations. Match the language's established conventions.
+- **Consistent vocabulary:** Reuse the existing domain term for the same concept; do not introduce a competing synonym without a reason. Never rename unrelated existing APIs merely to satisfy a style preference.
+- **Reuse proven behavior:** Prefer calling an existing function, utility, validator, state transition, or component when it genuinely implements the needed behavior. This preserves existing business rules and minimizes regressions. Don't duplicate equivalent logic by copy-paste.
+- **Do not force reuse:** If the existing behavior has different semantics, would introduce coupling, or requires a large unrelated refactor, explain the difference and take the smallest consistent alternative.
+- **Keep TDD intact:** First write a failing test for the new behavior. Reusing existing **already-implemented** helpers during GREEN is allowed; copying untested code written before RED as a shortcut is not. Refactor only after GREEN, and preserve all affected tests.
+- **Readable control flow:** Prefer straightforward conditions and intermediate names that explain intent over compressed expressions or clever one-liners. Do not add unnecessary layers merely to create named abstractions.
+
+Example: `loadSavedFilters`, `selectedFilters`, and `isSearchReady` convey their roles better than `doIt`, `data2`, or `ok`. Follow existing names if the project already uses clear equivalents.
+
 ### RED - Write Failing Test
 
 Write one minimal test showing what should happen.
