@@ -42,6 +42,8 @@ that norms say you ask about first (a merge, a push to a shared branch, a
 publish); and a plan so broken that every path forward is a guess. For
 those, stop and ask.
 
+**Human-owned decisions take precedence over automatic rulings.** Apply `superpowers:human-led-design` when implementation uncovers a **material, previously unapproved** change to user behavior, state ownership/SSOT, persistence, interfaces, new dependencies, architecture, or accepted trade-offs. Stop the affected implementation and ask for human approval with a short causal comparison. Record the approved decision, then resume the plan. Continue making routine naming, reuse, and local implementation choices autonomously; do not ask permission for each task.
+
 ## When to Use
 
 - You have a plan from superpowers:writing-plans and your human partner
